@@ -2,7 +2,6 @@ package com.demo.movies.dto;
 
 import com.demo.movies.model.Genre;
 import com.demo.movies.model.Movie;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
