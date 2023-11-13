@@ -3,11 +3,15 @@ package com.demo.movies.dto;
 import com.demo.movies.model.Genre;
 import com.demo.movies.model.Movie;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.List;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class MovieDto extends MovieSimpleDto {
 
@@ -15,9 +19,9 @@ public class MovieDto extends MovieSimpleDto {
 
     private String description;
 
-    private ArrayList<ActorDto> actors = new ArrayList();
+    private List<ActorDto> actors = new ArrayList<>();
 
-    private ArrayList<DirectorDto> directors = new ArrayList<>();
+    private List<DirectorDto> directors = new ArrayList<>();
 
     private Integer runtime;
 
@@ -39,6 +43,5 @@ public class MovieDto extends MovieSimpleDto {
         movie.getMovieActorsJoined().forEach(movieActorJoined -> actors.add(new ActorDto(movieActorJoined.getActor())));
         movie.getMovieDirectorsJoined().forEach(movieDirectorJoined -> directors.add(new DirectorDto(movieDirectorJoined.getDirector())));
     }
-
 
 }
