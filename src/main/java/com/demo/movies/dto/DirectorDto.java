@@ -14,9 +14,12 @@ public class DirectorDto {
 
     private String surname;
 
+    private String fullName;
+
     public DirectorDto(Director director) {
         setDirectorId(director.getDirectorId());
         setName(director.getName());
         setSurname(director.getSurname());
+        setFullName(director.getName() + " " + director.getSurname());
     }
 }

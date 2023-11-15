@@ -14,10 +14,13 @@ public class ActorDto {
 
     private String surname;
 
+    private String fullName;
+
     public ActorDto(Actor actor) {
         setActorId(actor.getActorId());
         setName(actor.getName());
         setSurname(actor.getSurname());
+        setFullName(actor.getName() + " " + actor.getSurname());
     }
 
 }
