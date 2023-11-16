@@ -24,7 +24,7 @@ public class MoviesApplication {
 	}
 
 	@ControllerAdvice
-	public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
+	public static class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 		@ExceptionHandler(value = { EntityNotFoundException.class })
 		protected ResponseEntity<Object> handleConflict(RuntimeException ex, WebRequest request) {
 			String bodyOfResponse = "Could not found movie with id: " + ((ServletWebRequest)request).getRequest().getRequestURI().split("/")[2];
