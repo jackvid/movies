@@ -1,0 +1,1 @@
+INSERT INTO movie_actor_joined (movie_actor_joined_id, fk_actor, fk_movie) VALUES ('6c69cc02-545e-424b-adfe-4d69518459d0','31D392B4-289A-2722-5BDD-67AA5DEE9876','00F4375D-6A94-5BF6-CECB-1AFC12C909AD')

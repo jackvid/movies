@@ -11,7 +11,7 @@ import lombok.Setter;
 public class MovieGenreJoined {
 
     @Id
-    @Column(name = "movieGenreJoined", unique = true, nullable = false)
+    @Column(name = "movieGenreJoinedId", unique = true, nullable = false)
     private String movieGenreJoinedId;
 
     @ManyToOne
