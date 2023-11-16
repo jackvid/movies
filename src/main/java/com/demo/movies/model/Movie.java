@@ -18,9 +18,8 @@ public class Movie {
 
     private Integer year;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "FK_Genre")
-    private Genre genre;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "movie")
+    private Set<MovieGenreJoined> movieGenresJoined = new HashSet<>(0);
 
     private String description;
 

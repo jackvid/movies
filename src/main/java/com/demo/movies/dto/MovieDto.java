@@ -22,6 +22,8 @@ public class MovieDto extends MovieSimpleDto {
 
     private List<DirectorDto> directors = new ArrayList<>();
 
+    private List<GenreDto> genres = new ArrayList<>();
+
     private Integer runtime;
 
     private Double rating;
@@ -37,8 +39,8 @@ public class MovieDto extends MovieSimpleDto {
         setRating(movie.getRating());
         setVotes(movie.getVotes());
         setMetaScore(movie.getMetaScore());
-        setGenre(movie.getGenre());
 
+        movie.getMovieGenresJoined().forEach(movieGenreJoined -> genres.add(new GenreDto(movieGenreJoined.getGenre())));
         movie.getMovieActorsJoined().forEach(movieActorJoined -> actors.add(new ActorDto(movieActorJoined.getActor())));
         movie.getMovieDirectorsJoined().forEach(movieDirectorJoined -> directors.add(new DirectorDto(movieDirectorJoined.getDirector())));
     }
